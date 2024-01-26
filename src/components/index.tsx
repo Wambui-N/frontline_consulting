@@ -1,5 +1,8 @@
-import  Navbar  from "./Navbar";
-import  Footer  from "./Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Button from "./Button";
 
-export default Navbar;
- Footer;
+export default 
+//Footer;
+Navbar;
+Button;

@@ -19,7 +19,14 @@ const config: Config = {
       'black': '#061103',
       'orange': '#EC6009',
       'white': '#e9fae5',
-    }
+    },
+    screens: {
+      'sm': '568px',
+      'md': '768px',
+      'lg': '1068px',
+      //'xl': '1280px',
+      //'2xl': '1536px',
+   },
   },
   plugins: [],
 };
