@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -46,6 +46,12 @@ const Hero = () => {
             development projects totechnical writing for technical oriented
             institutions.
           </p>
+          <Link
+          className="mx-[8vw] w-32 inline px-[15px] py-[4px] border-[1px] border-transparent hover:border-orange rounded-full text-white hover:text-orange bg-orange hover:bg-transparent"
+          href="/Contact"
+        >
+          Reach Out
+        </Link>
         </div>
       </div>
     </div>
