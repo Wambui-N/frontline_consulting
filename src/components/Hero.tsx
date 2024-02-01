@@ -34,7 +34,7 @@ const Hero = () => {
       style={{ backgroundImage: `url(${imageUrl})` }}
     >
       <div className="sm:min-h-[80vh] sm:max-h-[80vh] w-[100vw] sm:w-[60vw] sm:bg-gradient-to-r sm:from-white sm:from-90% sm:to-transparent">
-        <div className="h-[80vh] flex flex-col justify-center bg-white sm:bg-none">
+        <div className="h-[80vh] flex flex-col justify-center sm:bg-none">
           <h1 className="text-orange lg:text-4xl md:text-xl text-lg mb-3 mx-[8vw]">
             ENVIRONMENT/ TOURISM PLANNING,DEVELOPMENT PROJECTS AND TECHNICAL
             WRITING SPECIALISTS
