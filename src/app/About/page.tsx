@@ -1,8 +1,13 @@
 import React from 'react'
+import About from '@/components/About'
+import Mission from '@/components/Mission'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <About />
+      <Mission />
+    </div>
   )
 }
 
