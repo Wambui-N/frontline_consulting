@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-white text-black min-h-screen mx-[8vw]
+}
+
+nav{
+    @apply mx-[2vw] sm:mx-[8vw] my-2 flex flex-row items-center justify-center
+}
+
+#navmenu{
+    @apply hidden lg:flex flex-row items-center justify-between
+}
+
+#navmenu a{
+    @apply mx-[15px] hover:text-orange
+}
+
+#Hero img{
+    @apply h-full w-[18vw] object-cover
+}

@@ -14,7 +14,7 @@ const Footer = () => {
     return pathname === path;
   };
   return (
-    <div className="mx-4 sm:mx-[8vw] flex flex-col">
+    <div className="flex flex-col">
       <div className="flex justify-center">
         <div className="flex sm:flex-row flex-col items-center justify-center">
           <Link

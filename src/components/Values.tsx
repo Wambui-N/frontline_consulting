@@ -4,7 +4,7 @@ import Arrow from "./Arrow";
 const Values = () => {
   return (
     <div>
-      <div className="mx-[8vw] md:my-12 my-4">
+      <div className="md:my-12 my-4">
         <div className="md:grid md:grid-cols-5 flex flex-col my-8">
           <h6 className="md:col-span-1 text-orange font-bold text-sm">
             Who are we:
@@ -41,13 +41,13 @@ const Values = () => {
             conservancies and elsewhere.
           </p>
         </div>
-        <div className="md:grid md:grid-cols-5 flex flex-col my-8">
+        {/* <div className="md:grid md:grid-cols-5 flex flex-col my-8">
           <div></div>
           <Arrow 
             href="/About"
             Link_text="About Us"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

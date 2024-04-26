@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="mx-[2vw] sm:mx-[8vw] my-2 flex flex-row items-center justify-center">
+    <div className="my-2 flex flex-row items-center justify-center">
       <div id="Logo" className="flex-1">
         <Link href="/">
           <Image
@@ -44,7 +44,6 @@ const Navbar = () => {
       </div>
       <div
         id="navmenu"
-        className=" hidden lg:flex flex-row items-center justify-between"
       >
         <Link className={`mx-[15px] hover:text-orange ${isCurrentPage("/") ? 'text-orange' : 'text-black'}`} href="/">
           Home
@@ -59,7 +58,7 @@ const Navbar = () => {
           Portfolio
         </Link>
         <Link
-          className="mx-[30px] px-[15px] py-[4px] border-[1px] border-transparent hover:border-orange rounded-full text-white hover:text-orange bg-orange hover:bg-transparent"
+          className="mx-[30px] px-[15px] py-[4px] font-medium border-[1px] border-transparent hover:border-orange rounded-full text-white hover:text-orange bg-orange hover:bg-transparent transition-all ease-in-out duration-300"
           href="/Contact"
         >
           Contact Us
