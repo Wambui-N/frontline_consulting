@@ -6,7 +6,7 @@ const Values = () => {
     <div>
       <div className="md:my-12 my-4">
         <div className="md:grid md:grid-cols-5 flex flex-col my-8">
-          <h6 className="md:col-span-1 text-orange font-bold text-sm">
+          <h6 className="md:col-span-1 text-orange font-regular text-base">
             Who are we:
           </h6>
           <p className="md:col-span-4">
@@ -20,7 +20,7 @@ const Values = () => {
           </p>
         </div>
         <div className="md:grid md:grid-cols-5 flex flex-col my-8">
-          <h6 className="md:col-span-1 text-orange font-bold text-sm">
+          <h6 className="md:col-span-1 text-orange font-regular text-base">
             Our Value Proposition:
           </h6>
           <p className="md:col-span-4">
@@ -31,7 +31,7 @@ const Values = () => {
           </p>
         </div>
         <div className="md:grid md:grid-cols-5 flex flex-col my-8">
-          <h6 className="md:col-span-1 text-orange font-bold text-sm">
+          <h6 className="md:col-span-1 text-orange font-regular text-base">
             Our Clients:
           </h6>
           <p className="md:col-span-4">

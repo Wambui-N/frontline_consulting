@@ -15,8 +15,9 @@ const Footer = () => {
   };
   return (
     <div className="flex flex-col">
+      <div className="my-[15px] w-full h-1 border-t-[0.2vh] border-black/25"></div>
       <div className="flex justify-center">
-        <div className="flex sm:flex-row flex-col items-center justify-center">
+        <div className="flex sm:flex-row flex-col">
           <Link
             className={`mx-[15px] hover:text-orange ${
               isCurrentPage("/") ? "text-orange" : "text-black"
@@ -59,9 +60,10 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="my-[15px] w-full h-1 border-t-[0.2vh] border-black/25"></div>
       <div className="flex sm:flex-row flex-col justify-between items-center">
-        <p className="mx-[15px]">© 2023 Frontline Consulting. All rights reserved</p>
+        <p className="mx-[15px] text-black/50">
+          © 2023 Frontline Consulting. All rights reserved
+        </p>
         <Image
           className="inline-block h-[96px] w-auto mt-[10px] max-w-full object-contain"
           src="/Dark Logo L.png"

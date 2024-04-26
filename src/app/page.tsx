@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '@/components/Hero'
 import Values from '@/components/Values'
+import ProjectsFeature from '@/components/ProjectsFeature'
 
 
 const page = () => {
@@ -8,6 +9,7 @@ const page = () => {
     <div>
       <Hero />
       <Values />
+      <ProjectsFeature />
     </div>
   )
 }
