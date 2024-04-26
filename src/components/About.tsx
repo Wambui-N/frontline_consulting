@@ -5,7 +5,7 @@ import React from "react";
 const About = () => {
   return (
     <div
-      className="grid grid-cols-2 gap-[2vw] min-h-[70vh]"
+      className="grid grid-cols-2 gap-[2vw]"
     >
       <div className="flex flex-col justify-center gap-4">
         <h3 className="text-orange font-regular text-2xl">About Us</h3>
@@ -18,12 +18,12 @@ const About = () => {
       </div>
       <div className="">
         <Image
-          src="/Service.jpg"
+          src="/a.png"
           alt=""
           height={2000}
           width={2000}
           quality={100}
-          className="h-auto w-full"
+          className="h-auto w-full rounded-md"
         ></Image>
       </div>
     </div>
