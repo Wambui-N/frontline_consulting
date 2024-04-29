@@ -80,10 +80,17 @@ const Team = () => {
                 natural resources management. She is also an expert in:
               </p>
               <ul className="list-disc list-inside">
-                <li>KATO Marketing Advisory Committee.</li>
-                <li>KTF Environmental Committee.</li>
-                <li>Ecotourism Kenya Environmental Committee of KTF.</li>
+                <li>Environmental Impact Assessments and Audits</li>
+                <li>Project management</li>
+                <li>Ecological monitoring and data collection</li>
+                <li>Monitoring and evaluation.</li>
               </ul>
+              <p>
+                Sarah has a master of environment from Yale University, School
+                of Forestry & Environmental Studies and Bachelor of Science in
+                Wildlife Management from Moi university, among other
+                qualifications and awards
+              </p>
             </div>
           </div>
         </div>
