@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-white text-black min-h-screen mx-[8vw]
+    @apply bg-white text-black min-h-screen mx-[12vw]
 }
 
 nav{
@@ -22,5 +22,5 @@ h3{
 }
 
 #Hero img{
-    @apply h-full w-[18vw] object-cover rounded-md
+    @apply h-full w-[15vw] object-cover rounded-md
 }

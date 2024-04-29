@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div id="Hero" className="grid grid-cols-2 gap-[2vw] min-h-[70vh] -mr-[8vw]">
+    <div id="Hero" className="grid grid-cols-2 gap-[2vw] min-h-[70vh] -mr-[12vw]">
       <div className="flex flex-col justify-center gap-4">
         <h1 className="text-orange font-regular text-3xl">
           Environment/Tourism Planning, Development Projects and Technical
