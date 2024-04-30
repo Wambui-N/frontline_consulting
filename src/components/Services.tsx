@@ -7,7 +7,7 @@ const Services = () => {
     <div>
       <div className="">
         <div className="flex flex-col justify-center gap-4">
-          <h3 className="text-orange text-center font-regular text-2xl">
+          <h3 className="text-orange text-center font-regular">
             Our Services
           </h3>
           <p>

@@ -4,7 +4,7 @@ const Mission = () => {
   return (
     <div>
       <div className="md:my-12 my-4">
-        <div className="md:grid md:grid-cols-5 flex flex-col my-8">
+        <div className="md:grid md:grid-cols-5 md:gap-2 flex flex-col my-8">
           <h6 className="md:col-span-1 text-orange font-regular text-base">
             Our Mission:
           </h6>
@@ -13,7 +13,7 @@ const Mission = () => {
             projects.
           </p>
         </div>
-        <div className="md:grid md:grid-cols-5 flex flex-col my-8">
+        <div className="md:grid md:grid-cols-5 md:gap-2 flex flex-col my-8">
           <h6 className="md:col-span-1 text-orange font-regular text-base">
             Our Vision:
           </h6>
@@ -39,7 +39,7 @@ const Mission = () => {
             </ul>
           </div>
         </div>
-        <div className="md:grid md:grid-cols-5 flex flex-col my-8">
+        <div className="md:grid md:grid-cols-5 md:gap-2 flex flex-col my-8">
           <h6 className="md:col-span-1 text-orange font-regular text-base">
             Who works with us:
           </h6>

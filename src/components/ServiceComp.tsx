@@ -5,8 +5,8 @@ import { ServiceProps } from "@/../types";
 const ServiceComp = ({ title, description, list, style, image }: ServiceProps) => {
   return (
     <div className={`flex md:flex-row flex-col md:py-[5vh] py-[2vh] items-center md:gap-[5vw] gap-[1vh] ${style}`}>
-      <div className="basis-1/2 flex flex-col gap-4">
-        <h3 className="text-black uppercase font-regular text-2xl">{title}</h3>
+      <div className="basis-1/2 flex flex-col lg:gap-3 gap-1">
+        <h3 className="text-black uppercase font-regular">{title}</h3>
         {description && <p>{description}</p>}
         <ul className="list-disc list-inside">
           {list && list.map((item, index) => <li key={index}>{item}</li>)}

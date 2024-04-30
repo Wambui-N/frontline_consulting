@@ -16,7 +16,7 @@ const Team = () => {
               width={500}
               className="h-[60vh] w-full object-cover object-center rounded-md"
             ></Image>
-            <h3 className="text-black font-regular text-center text-3xl my-4">
+            <h3 className="text-black font-regular text-center my-4">
               Daniel Ndung'u
             </h3>
           </div>
@@ -68,7 +68,7 @@ const Team = () => {
               width={500}
               className="h-[60vh] w-full object-cover object-top rounded-md"
             ></Image>
-            <h3 className="text-black font-regular text-center text-3xl my-4">
+            <h3 className="text-black font-regular text-center my-4">
               Sarah Mwakha Omusula
             </h3>
           </div>

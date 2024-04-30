@@ -6,8 +6,8 @@ const ProtfolioComp = ({title, description, style, list, image}:PortfolioProps) 
   return (
     <div>
     <div className={`flex md:flex-row flex-col md:py-[5vh] py-[2vh] items-center md:gap-[5vw] gap-[1vh] ${style}`}>
-        <div className="basis-1/2 flex flex-col gap-3">
-          <h3 className="text-black uppercase font-regular text-2xl">
+        <div className="basis-1/2 flex flex-col lg:gap-3 gap-1">
+          <h3 className="text-black uppercase font-regular">
             {title}
           </h3>
           {description && <p>{description}</p>}

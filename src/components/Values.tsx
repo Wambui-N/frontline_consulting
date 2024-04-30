@@ -5,7 +5,7 @@ const Values = () => {
   return (
     <div>
       <div className="md:my-12 my-4">
-        <div className="md:grid md:grid-cols-5 flex flex-col my-8">
+        <div className="md:grid md:grid-cols-5 md:gap-2 flex flex-col my-8">
           <h6 className="md:col-span-1 text-orange font-regular text-base">
             Who are we:
           </h6>
@@ -19,7 +19,7 @@ const Values = () => {
             institutions.
           </p>
         </div>
-        <div className="md:grid md:grid-cols-5 flex flex-col my-8">
+        <div className="md:grid md:grid-cols-5 md:gap-2 flex flex-col my-8">
           <h6 className="md:col-span-1 text-orange font-regular text-base">
             Our Value Proposition:
           </h6>
@@ -30,7 +30,7 @@ const Values = () => {
             satisfaction and value for money.
           </p>
         </div>
-        <div className="md:grid md:grid-cols-5 flex flex-col my-8">
+        <div className="md:grid md:grid-cols-5 md:gap-2 flex flex-col my-8">
           <h6 className="md:col-span-1 text-orange font-regular text-base">
             Our Clients:
           </h6>
