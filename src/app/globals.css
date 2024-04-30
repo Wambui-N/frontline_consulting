@@ -22,5 +22,5 @@ h3{
 }
 
 #Hero img{
-    @apply md:h-full h-auto md:w-[15vw]  object-cover rounded-md
+    @apply lg:h-full md:h-[40vh] lg:w-[15vw] basis-1/3 md:w-[20vw] object-cover rounded-md
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div id="Hero" className="grid grid-cols-2 gap-[2vw] min-h-[70vh] -mr-[12vw]">
+    <div id="Hero" className="grid lg:grid-cols-2 gap-[2vw] lg:min-h-[70vh] lg:-mr-[12vw]">
       <div className="flex flex-col justify-center gap-4">
         <h1 className="text-orange font-regular text-3xl">
           Environment/Tourism Planning, Development Projects and Technical
@@ -23,7 +23,7 @@ const Hero = () => {
           </button>
         </Link>
       </div>
-      <div className="flex flex-row gap-3 overflow-hidden">
+      <div className="flex flex-row gap-3 justify-between overflow-hidden w-full">
         <Image
           src="/c.jpg"
           alt=""
