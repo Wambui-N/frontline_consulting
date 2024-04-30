@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div id="Hero" className="grid lg:grid-cols-2 gap-[2vw] lg:min-h-[70vh] lg:-mr-[12vw]">
+    <div
+      id="Hero"
+      className="grid lg:grid-cols-2 gap-[2vw] lg:min-h-[70vh] xl:-mr-[12vw] lg:-mr-[8vw]"
+    >
       <div className="flex flex-col justify-center gap-4">
         <h1 className="text-orange font-regular text-3xl">
           Environment/Tourism Planning, Development Projects and Technical
@@ -30,7 +33,7 @@ const Hero = () => {
           height={2000}
           width={2000}
           quality={100}
-          className=""
+          className="h-[30vh] w-full sm:object-center"
         ></Image>
         <Image
           src="/e.jpg"
@@ -38,15 +41,16 @@ const Hero = () => {
           height={2000}
           width={2000}
           quality={100}
-          className=""
-        ></Image><Image
-        src="/d.jpg"
-        alt=""
-        height={2000}
-        width={2000}
-        quality={100}
-        className=""
-      ></Image>
+          className="hidden md:block"
+        ></Image>
+        <Image
+          src="/d.jpg"
+          alt=""
+          height={2000}
+          width={2000}
+          quality={100}
+          className="hidden md:block"
+        ></Image>
       </div>
     </div>
   );

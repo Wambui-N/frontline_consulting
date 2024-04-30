@@ -5,7 +5,7 @@ import React from "react";
 const ProjectsFeature = () => {
   return (
     <>
-      <h3 className="text-orange font-regular text-2xl my-4"> Projects Feature</h3>
+      <h3 className="text-orange font-regular my-4"> Projects Feature</h3>
       <div className="lg:flex lg:flex-row md:grid md:grid-cols-2 flex-col justify-between gap-5 my-4">
         <Link href="#">
           <Image
@@ -13,7 +13,7 @@ const ProjectsFeature = () => {
             alt=""
             height={500}
             width={500}
-            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
+            className="lg:w-[20vw] w-[100%] md:h-[70vh] h-full object-cover rounded-md my-2"
           ></Image>
         </Link>
         <Link href="#">
@@ -22,7 +22,7 @@ const ProjectsFeature = () => {
             alt=""
             height={500}
             width={500}
-            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
+            className="lg:w-[20vw] w-[100%] md:h-[70vh] h-full object-cover rounded-md my-2"
           ></Image>
         </Link>
         <Link href="#">
@@ -31,7 +31,7 @@ const ProjectsFeature = () => {
             alt=""
             height={500}
             width={500}
-            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
+            className="lg:w-[20vw] w-[100%] md:h-[70vh] h-full object-cover rounded-md my-2"
           ></Image>
         </Link>
         <Link href="#">
@@ -40,7 +40,7 @@ const ProjectsFeature = () => {
             alt=""
             height={500}
             width={500}
-            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
+            className="lg:w-[20vw] w-[100%] md:h-[70vh] h-full object-cover rounded-md my-2"
           ></Image>
         </Link>
       </div>
