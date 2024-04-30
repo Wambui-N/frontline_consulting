@@ -6,14 +6,14 @@ const ProjectsFeature = () => {
   return (
     <>
       <h3 className="text-orange font-regular text-2xl my-4"> Projects Feature</h3>
-      <div className="flex md:flex-row flex-col justify-between gap-5 my-4">
+      <div className="lg:flex lg:flex-row md:grid md:grid-cols-2 flex-col justify-between gap-5 my-4">
         <Link href="#">
           <Image
             src="/Amboseli Eco.jpg"
             alt=""
             height={500}
             width={500}
-            className="w-[20vw] h-[70vh] object-cover"
+            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
           ></Image>
         </Link>
         <Link href="#">
@@ -22,7 +22,7 @@ const ProjectsFeature = () => {
             alt=""
             height={500}
             width={500}
-            className="w-[20vw] h-[70vh] object-cover"
+            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
           ></Image>
         </Link>
         <Link href="#">
@@ -31,7 +31,7 @@ const ProjectsFeature = () => {
             alt=""
             height={500}
             width={500}
-            className="w-[20vw] h-[70vh] object-cover"
+            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
           ></Image>
         </Link>
         <Link href="#">
@@ -40,7 +40,7 @@ const ProjectsFeature = () => {
             alt=""
             height={500}
             width={500}
-            className="w-[20vw] h-[70vh] object-cover"
+            className="lg:w-[20vw] md:w-[100%] h-[70vh] object-cover"
           ></Image>
         </Link>
       </div>

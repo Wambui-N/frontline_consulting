@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-white text-black min-h-screen mx-[12vw]
+    @apply bg-white text-black min-h-screen xl:mx-[12vw] lg:mx-[10vw] md:mx-[8vw] mx-[6vw]
 }
 
 nav{

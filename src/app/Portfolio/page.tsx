@@ -47,21 +47,21 @@ const page = () => {
             alt=""
             height={500}
             width={500}
-            className="basis-1/2 rounded-lg md:mix-h-[50vh] md:w-[50%] w-full h-auto object-cover"
+            className="basis-1/3 rounded-lg md:mix-h-[50vh] md:w-[30%] w-full h-auto object-cover"
             />
           <Image
             src="/02.png"
             alt=""
             height={500}
             width={500}
-            className="basis-1/2 rounded-lg md:mix-h-[50vh] md:w-[50%] w-full h-auto object-cover"
+            className="basis-1/3 rounded-lg md:mix-h-[50vh] md:w-[30%] w-full h-auto object-cover"
             />
           <Image
             src="/03.png"
             alt=""
             height={500}
             width={500}
-            className="basis-1/2 rounded-lg md:mix-h-[50vh] md:w-[50%] w-full h-auto object-cover"
+            className="basis-1/3 rounded-lg md:mix-h-[50vh] md:w-[30%] w-full h-auto object-cover"
             />
         </div>
         <p>
