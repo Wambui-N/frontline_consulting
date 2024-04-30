@@ -1,10 +1,13 @@
 "use client";
 
 import React, { use } from "react";
+import { useRouter } from "next/navigation";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 function page() {
+  const router = useRouter();
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -20,8 +23,29 @@ function page() {
       message: Yup.string().required("Message is required"),
     }),
 
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      try {
+        const formData = new FormData();
+        formData.append("name", values.name);
+        formData.append("email", values.email);
+        formData.append("message", values.message);
+        formData.append("access_key", "3a7f1ffa-44fd-447c-acb8-ff7a92a9711c");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        });
+        const result = await response.json();
+        if (result.success) {
+          console.log(result);
+          // Navigate to success page or perform other actions upon successful form submission
+        } else {
+          // Handle errors if submission was not successful
+          console.error("Submission failed:", result);
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
     },
   });
 
@@ -61,7 +85,9 @@ function page() {
               <label
                 htmlFor="email"
                 className={`${
-                  formik.touched.email && formik.errors.email ? "text-orange" : ""
+                  formik.touched.email && formik.errors.email
+                    ? "text-orange"
+                    : ""
                 }`}
               >
                 {formik.touched.email && formik.errors.email
@@ -82,7 +108,9 @@ function page() {
               <label
                 htmlFor="message"
                 className={`${
-                  formik.touched.message && formik.errors.message ? "text-orange" : ""
+                  formik.touched.message && formik.errors.message
+                    ? "text-orange"
+                    : ""
                 }`}
               >
                 {formik.touched.message && formik.errors.message
