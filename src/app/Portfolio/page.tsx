@@ -41,28 +41,28 @@ const page = () => {
         image="/Amboseli.jpg"
       />
       <div>
-        <div className="flex flex-row justify-between gap-4 my-3">
+        <div className="flex md:flex-row flex-col justify-between md:gap-4 gap-2 md:my-3 my-1.5">
           <Image
             src="/01.png"
             alt=""
             height={500}
             width={500}
-            className="basis-1/3 md:mix-h-[50vh] w-[20%] h-auto object-cover"
-          />
+            className="basis-1/2 rounded-lg md:mix-h-[50vh] md:w-[50%] w-full h-auto object-cover"
+            />
           <Image
             src="/02.png"
             alt=""
             height={500}
             width={500}
-            className="basis-1/3 md:mix-h-[50vh] w-[20%] h-auto object-cover"
-          />
+            className="basis-1/2 rounded-lg md:mix-h-[50vh] md:w-[50%] w-full h-auto object-cover"
+            />
           <Image
             src="/03.png"
             alt=""
             height={500}
             width={500}
-            className="basis-1/3 md:mix-h-[50vh] w-[20%] h-auto object-cover"
-          />
+            className="basis-1/2 rounded-lg md:mix-h-[50vh] md:w-[50%] w-full h-auto object-cover"
+            />
         </div>
         <p>
           Daniel was the consultant writer for the above project

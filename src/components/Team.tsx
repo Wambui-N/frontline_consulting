@@ -6,7 +6,7 @@ const Team = () => {
     <div>
       <h3 className="text-orange font-regular text-2xl my-4">Meet the team</h3>
       <div className="flex flex-col gap-10">
-        <div className="flex flex-row items-center gap-6">
+        <div className="flex md:flex-row flex-col items-center md:gap-6 gap-3">
           <div className="flex flex-col gap-2 items-center basis-1/3">
             <Image
               src="/Daniel.JPG"
@@ -58,7 +58,7 @@ const Team = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-center gap-6">
+        <div className="flex md:flex-row flex-col items-center md:gap-6 gap-3">
           <div className="flex flex-col gap-2 items-center basis-1/3">
             <Image
               src="/Sarah.JPG"

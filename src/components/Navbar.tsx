@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components";
@@ -9,25 +9,27 @@ import { useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 const Navbar = () => {
-  const router = useRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const isCurrentPage = (path: string) => {
-    return pathname === path
-    
+    return pathname === path;
   };
 
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+  };
+
+  useEffect(() => {
     if (showMenu) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
-  };
+  });
 
   return (
     <div className="my-2 flex flex-row items-center justify-center">
@@ -42,19 +44,37 @@ const Navbar = () => {
           />
         </Link>
       </div>
-      <div
-        id="navmenu"
-      >
-        <Link className={`mx-[15px] hover:text-orange ${isCurrentPage("/") ? 'text-orange' : 'text-black'}`} href="/">
+      <div id="navmenu">
+        <Link
+          className={`mx-[15px] hover:text-orange ${
+            isCurrentPage("/") ? "text-orange" : "text-black"
+          }`}
+          href="/"
+        >
           Home
         </Link>
-        <Link className={`mx-[15px] hover:text-orange ${isCurrentPage("/About") ? 'text-orange' : 'text-black'}`} href="/About">
+        <Link
+          className={`mx-[15px] hover:text-orange ${
+            isCurrentPage("/About") ? "text-orange" : "text-black"
+          }`}
+          href="/About"
+        >
           About
         </Link>
-        <Link className={`mx-[15px] hover:text-orange ${isCurrentPage("/Services") ? 'text-orange' : 'text-black'}`} href="/Services">
+        <Link
+          className={`mx-[15px] hover:text-orange ${
+            isCurrentPage("/Services") ? "text-orange" : "text-black"
+          }`}
+          href="/Services"
+        >
           Services
         </Link>
-        <Link className={`mx-[15px] hover:text-orange ${isCurrentPage("/Portfolio") ? 'text-orange' : 'text-black'}`} href="/Portfolio">
+        <Link
+          className={`mx-[15px] hover:text-orange ${
+            isCurrentPage("/Portfolio") ? "text-orange" : "text-black"
+          }`}
+          href="/Portfolio"
+        >
           Portfolio
         </Link>
         <Link
@@ -84,9 +104,11 @@ const Navbar = () => {
           <path d="M4 18l16 0" />
         </svg>
       </div>
-      <div className={`fixed top-0 bottom-0 right-[-50px] min-h-full min-w-full sm:min-w-[50vw] flex flex-col justify-center items-center shadow-xl bg-white ${
-  showMenu ? 'translate-x-0' : 'translate-x-full'
-}`}>
+      <div
+        className={`fixed top-0 bottom-0 right-[-50px] min-h-full min-w-full sm:min-w-[50vw] flex flex-col justify-center items-center shadow-xl bg-white ${
+          showMenu ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <Link className="my-[15px] text-lg hover:text-orange" href="/">
           Home
         </Link>
