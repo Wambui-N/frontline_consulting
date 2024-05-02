@@ -17,7 +17,7 @@ const Team = () => {
               className="md:h-[60vh] h-[40vh] w-full object-cover object-center rounded-md"
             ></Image>
             <h3 className="text-black font-regular text-center md:my-4">
-              Daniel Ndung'u
+              Daniel Ndung&apos;u
             </h3>
           </div>
           <div className="basis-2/3 flex flex-col gap-4">

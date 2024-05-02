@@ -1,11 +1,11 @@
 "use client";
 
-import React, { use } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-function page() {
+function Page() {
   const router = useRouter();
 
   const formik = useFormik({
@@ -24,6 +24,8 @@ function page() {
     }),
 
     onSubmit: async (values) => {
+      //reroute
+      router.push("/Contact");
       try {
         const formData = new FormData();
         formData.append("name", values.name);
@@ -38,6 +40,7 @@ function page() {
         const result = await response.json();
         if (result.success) {
           console.log(result);
+
           // Navigate to success page or perform other actions upon successful form submission
         } else {
           // Handle errors if submission was not successful
@@ -139,4 +142,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
