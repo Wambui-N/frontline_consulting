@@ -20,7 +20,7 @@ const Hero = () => {
           development projects to technical writing for technical oriented
           institutions.
         </p>
-        <Link href="#">
+        <Link href="/Contact">
           <button className="my-2 px-4 py-1 rounded-full border-[1px] border-orange bg-orange hover:bg-transparent text-white hover:text-orange transition-all ease-in-out duration-300">
             Reach out
           </button>
