@@ -6,12 +6,12 @@ import Link from "next/link";
 import Button from "@/components";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { useState } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  //const searchParams = useSearchParams();
 
   const isCurrentPage = (path: string) => {
     return pathname === path;

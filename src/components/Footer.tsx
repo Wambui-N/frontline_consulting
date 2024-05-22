@@ -3,12 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const Footer = () => {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  //const searchParams = useSearchParams();
 
   const isCurrentPage = (path: string) => {
     return pathname === path;
