@@ -31,7 +31,7 @@ function Page() {
         formData.append("name", values.name);
         formData.append("email", values.email);
         formData.append("message", values.message);
-        formData.append("access_key", "3a7f1ffa-44fd-447c-acb8-ff7a92a9711c");
+        formData.append("access_key", "00e90b55-5db3-4513-9dc9-ebd199037714");
 
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
