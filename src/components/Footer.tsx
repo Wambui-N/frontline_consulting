@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col">
       <div className="my-[15px] w-full h-1 border-t-[0.2vh] border-black/25"></div>
-      <div className="flex justify-center">
+      <div className="flex md:justify-center">
         <div className="flex sm:flex-row flex-col">
           <Link
             className={`mx-[15px] hover:text-orange ${
