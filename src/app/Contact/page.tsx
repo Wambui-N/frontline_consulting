@@ -41,7 +41,10 @@ function Page() {
         if (result.success) {
           console.log(result);
 
-          // Navigate to success page or perform other actions upon successful form submission
+          // Navigate to home page
+          router.push("/");
+          //Display success message
+          alert("Form submitted successfully!");
         } else {
           // Handle errors if submission was not successful
           console.error("Submission failed:", result);
