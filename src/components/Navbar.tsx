@@ -1,134 +1,147 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
-  const router = useRouter();
   const pathname = usePathname();
-  //const searchParams = useSearchParams();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const isCurrentPage = (path: string) => {
     return pathname === path;
   };
 
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
   useEffect(() => {
-    if (showMenu) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  });
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/About", label: "About" },
+    { href: "/Services", label: "Services" },
+    { href: "/Portfolio", label: "Portfolio" },
+  ];
 
   return (
-    <div className="my-2 flex flex-row items-center justify-center">
+    <motion.nav
+      className={cn(
+        "sticky top-0 z-50 my-2 flex flex-row items-center justify-center transition-all duration-300",
+        isScrolled && "bg-white/80 backdrop-blur-md shadow-soft"
+      )}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div id="Logo" className="flex-1">
-        <Link href="/">
-          <Image
-            className="inline-block h-[96px] w-auto mt-[10px] max-w-full object-contain"
-            src="/Dark Logo L.png"
-            width={250}
-            height={250}
-            alt="Frontline Consulting Logo"
-          />
+        <Link href="/" aria-label="Frontline Consulting Home">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Image
+              className="inline-block h-[96px] w-auto mt-[10px] max-w-full object-contain"
+              src="/Dark Logo L.png"
+              width={250}
+              height={250}
+              alt="Frontline Consulting Logo"
+              priority
+            />
+          </motion.div>
         </Link>
       </div>
-      <div id="navmenu">
-        <Link
-          className={`mx-[15px] hover:text-orange ${
-            isCurrentPage("/") ? "text-orange" : "text-black"
-          }`}
-          href="/"
-        >
-          Home
+      <nav id="navmenu" className="hidden lg:flex flex-row items-center justify-between" aria-label="Main navigation">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            className={cn(
+              "mx-[15px] relative transition-colors duration-200",
+              isCurrentPage(link.href) ? "text-orange" : "text-black hover:text-orange"
+            )}
+            href={link.href}
+            aria-current={isCurrentPage(link.href) ? "page" : undefined}
+          >
+            {link.label}
+            {isCurrentPage(link.href) && (
+              <motion.div
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange"
+                layoutId="navbar-indicator"
+                transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                aria-hidden="true"
+              />
+            )}
+          </Link>
+        ))}
+        <Link href="/Contact" className="ml-8">
+          <Button variant="default" className="rounded-full">
+            Contact Us
+          </Button>
         </Link>
-        <Link
-          className={`mx-[15px] hover:text-orange ${
-            isCurrentPage("/About") ? "text-orange" : "text-black"
-          }`}
-          href="/About"
-        >
-          About
-        </Link>
-        <Link
-          className={`mx-[15px] hover:text-orange ${
-            isCurrentPage("/Services") ? "text-orange" : "text-black"
-          }`}
-          href="/Services"
-        >
-          Services
-        </Link>
-        <Link
-          className={`mx-[15px] hover:text-orange ${
-            isCurrentPage("/Portfolio") ? "text-orange" : "text-black"
-          }`}
-          href="/Portfolio"
-        >
-          Portfolio
-        </Link>
-        <Link
-          className="mx-[30px] px-[15px] py-[4px] font-medium border-[1px] border-transparent hover:border-orange rounded-full text-white hover:text-orange bg-orange hover:bg-transparent transition-all ease-in-out duration-300"
-          href="/Contact"
-        >
-          Contact Us
-        </Link>
-      </div>
-      <div className={`lg:hidden rounded-full z-10`}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-menu-2"
-          width="auto"
-          height="30"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#061103"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          onClick={toggleMenu}
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M4 6l16 0" />
-          <path d="M4 12l16 0" />
-          <path d="M4 18l16 0" />
-        </svg>
-      </div>
-      <div
-        className={`fixed top-0 bottom-0 right-[-50px] min-h-full min-w-full sm:min-w-[50vw] flex flex-col justify-center items-center shadow-xl bg-white ${
-          showMenu ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <Link className="my-[15px] text-lg hover:text-orange" href="/">
-          Home
-        </Link>
-        <Link className="my-[15px] text-lg hover:text-orange" href="/About">
-          About
-        </Link>
-        <Link className="my-[15px] text-lg hover:text-orange" href="/Services">
-          Services
-        </Link>
-        <Link className="my-[15px] text-lg hover:text-orange" href="/Portfolio">
-          Portfolio
-        </Link>
-        <Link
-          className="my-[30px] text-lg px-[15px] py-[4px] border-[1px] border-transparent hover:border-orange rounded-full text-white hover:text-orange bg-orange hover:bg-transparent"
-          href="/Contact"
-        >
-          Contact Us
-        </Link>
-      </div>
-    </div>
+      </nav>
+      <Sheet>
+        <SheetTrigger asChild className="lg:hidden">
+          <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open navigation menu">
+            <Menu className="h-6 w-6" />
+            <span className="sr-only">Open menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+          <SheetHeader>
+            <SheetTitle>Navigation Menu</SheetTitle>
+          </SheetHeader>
+          <nav className="flex flex-col gap-4 mt-8" aria-label="Mobile navigation">
+            {navLinks.map((link, index) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Link
+                  className={cn(
+                    "text-lg font-medium transition-colors duration-200 block py-2",
+                    isCurrentPage(link.href)
+                      ? "text-orange"
+                      : "text-black hover:text-orange"
+                  )}
+                  href={link.href}
+                >
+                  {link.label}
+                </Link>
+              </motion.div>
+            ))}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: navLinks.length * 0.1 }}
+              className="mt-4"
+            >
+              <Link href="/Contact">
+                <Button variant="default" className="w-full rounded-full">
+                  Contact Us
+                </Button>
+              </Link>
+            </motion.div>
+          </nav>
+        </SheetContent>
+      </Sheet>
+    </motion.nav>
   );
 };
 

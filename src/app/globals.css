@@ -2,8 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-white text-black min-h-screen xl:mx-[12vw] lg:mx-[10vw] md:mx-[8vw] mx-[6vw]
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-black min-h-screen xl:mx-[12vw] lg:mx-[10vw] md:mx-[8vw] mx-[6vw];
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
 
 nav{
@@ -19,9 +50,43 @@ h3{
 }
 
 #navmenu a{
-    @apply mx-[15px] hover:text-orange
+    @apply mx-[15px] hover:text-orange transition-colors duration-200
 }
 
 #Hero img{
     @apply lg:h-full md:h-[40vh] lg:w-[15vw] md:basis-1/3 md:w-[20vw] object-cover rounded-md
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modern focus states */
+*:focus-visible {
+  @apply outline-none ring-2 ring-orange ring-offset-2 ring-offset-white;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }

@@ -11,10 +11,11 @@ const Team = () => {
             <Image
               src="/Daniel.JPG"
               quality={100}
-              alt=""
+              alt="Daniel Ndung'u - Founding and Managing Partner of Frontline Consulting"
               height={500}
               width={500}
               className="md:h-[60vh] h-[40vh] w-full object-cover object-center rounded-md"
+              loading="lazy"
             ></Image>
             <h3 className="text-black font-regular text-center md:my-4">
               Daniel Ndung&apos;u
@@ -63,10 +64,11 @@ const Team = () => {
             <Image
               src="/Sarah.JPG"
               quality={100}
-              alt=""
+              alt="Sarah Mwakha Omusula - Consultant and Partner at Frontline Consultants"
               height={500}
               width={500}
               className="md:h-[60vh] h-[40vh] w-full object-cover object-center rounded-md"
+              loading="lazy"
             ></Image>
             <h3 className="text-black font-regular text-center md:my-4">
               Sarah Mwakha Omusula

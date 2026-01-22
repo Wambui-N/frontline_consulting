@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import React from "react";
 import ProtfolioComp from "@/components/ProtfolioComp";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Frontline Consulting - Our Projects & Case Studies",
+  description: "Explore our portfolio of successful projects including Amboseli Ecosystem Management Plan, Maasai Mara, Lake Solai, and Lake Bogoria management plans. See our expertise in action.",
+  openGraph: {
+    title: "Portfolio | Frontline Consulting",
+    description: "Explore our portfolio of successful environmental and tourism management projects.",
+    type: "website",
+  },
+};
 
 const page = () => {
   return (
@@ -44,24 +55,27 @@ const page = () => {
         <div className="flex md:flex-row flex-col justify-between md:gap-4 gap-2 md:my-3 my-1.5">
           <Image
             src="/01.png"
-            alt=""
+            alt="UNDP GEF/SGP-funded project evaluation report"
             height={500}
             width={500}
             className="basis-1/3 rounded-lg md:mix-h-[50vh] md:w-[30%] w-full h-auto object-cover"
+            loading="lazy"
             />
           <Image
             src="/02.png"
-            alt=""
+            alt="UNDP GEF/SGP-funded project evaluation report"
             height={500}
             width={500}
             className="basis-1/3 rounded-lg md:mix-h-[50vh] md:w-[30%] w-full h-auto object-cover"
+            loading="lazy"
             />
           <Image
             src="/03.png"
-            alt=""
+            alt="UNDP GEF/SGP-funded project evaluation report"
             height={500}
             width={500}
             className="basis-1/3 rounded-lg md:mix-h-[50vh] md:w-[30%] w-full h-auto object-cover"
+            loading="lazy"
             />
         </div>
         <p>
